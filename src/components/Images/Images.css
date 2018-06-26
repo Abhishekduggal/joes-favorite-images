@@ -1,0 +1,11 @@
+.images-container {
+  width: 100vw;
+  min-height: calc(100vh - 210px);
+  border: 1px red solid;
+  background: #f4f5f6;
+}
+.image-box {
+  width: 300px;
+  height: 350px;
+  border: 1px black solid;
+}
