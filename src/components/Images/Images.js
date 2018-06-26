@@ -5,8 +5,11 @@ export default function Images(props) {
   let mappedImages = props.images.map((e, i) => {
     return (
       <div key={i} className="image-box column-center-all">
-        <img src={e} width={"200px"} />
-        <button onClick={() => props.deleteImg(i)}>delete</button>
+        {/*
+        1) Create an img tag with a src attribute and a width of 200px
+        2) Create a button with an that invokes the method deleteImg on click,
+            passing the image's index as a parameter
+        */}
       </div>
     );
   });

@@ -1,30 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Uploader.css";
 
-export default class Uploader extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      url: ""
-    };
-  }
-  handleInput(val) {
-    this.setState({ url: val });
-  }
-  render() {
-    return (
-      <div className="upload-container column-center-all">
-        <input
-          onChange={e => this.handleInput(e.target.value)}
-          placeholder="enter image URL"
-        />
-        <button
-          onClick={() => this.props.handleUrl(this.state.url)}
-          className="primary"
-        >
-          Upload
-        </button>
-      </div>
-    );
-  }
+export default function Uploader() {
+  return (
+    <div className="upload-container column-center-all">
+      {/*
+      1) Create an input that takes in url and stores it in state
+      2) Create a button that invokes addUrl with the current url, stored in
+          state, as a parameter
+      3) Add the class "primary" to the button
+      */}
+    </div>
+  );
 }

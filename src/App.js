@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Uploader from "./components/Uploader/Uploader";
-import Images from "./components/Images/Images";
+//import the components: Header, Uploader, & Images
 
 class App extends Component {
   constructor() {
@@ -14,30 +12,22 @@ class App extends Component {
       buttonName: "Upload",
       images: []
     };
-    this.handleUrl = this.handleUrl.bind(this);
-    this.deleteImg = this.deleteImg.bind(this);
   }
-  handleUrl(val) {
-    let newArr = this.state.images.push(val);
-    this.setState({ imageUrl: newArr });
-  }
-  deleteImg(i) {
-    let { images } = this.state;
-    images.splice(i, 1);
-    this.setState({ images: images });
-  }
+  /*
+    1) Create and bind a method called 'addUrl' adds the
+        url parameter to images array
+    2) Create and bind a method called 'deleteImg' that 
+        removes an element from the images array based
+        on the index parameter passed to it.
+  */
   render() {
     return (
       <div>
-        <Header
-          header={this.state.header}
-          headerDescription={this.state.headerDescription}
-        />
-        <Uploader
-          buttonName={this.state.buttonName}
-          handleUrl={this.handleUrl}
-        />
-        <Images images={this.state.images} deleteImg={this.deleteImg} />
+        {/*
+            1) Render Header passing the following props: header & headerDescription
+            2) Render Uploader passing the following props: buttonName & handleUrl
+            3) Render Images passing the following props: images & deleteImg
+        */}
       </div>
     );
   }

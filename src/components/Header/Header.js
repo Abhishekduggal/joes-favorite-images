@@ -4,8 +4,10 @@ import "./Header.css";
 export default function Header(props) {
   return (
     <div className="header-container column-center-all">
-      <h1>{props.header}</h1>
-      <p>{props.headerDescription}</p>
+      {/*
+        Add an h1 tag with the header and a 
+        p tag with the description
+      */}
     </div>
   );
 }
